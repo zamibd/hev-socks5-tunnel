@@ -13,7 +13,7 @@ COPY . /src
 RUN make
 
 FROM alpine:latest
-LABEL org.opencontainers.image.source="https://github.com/zamibd/proxy-socks5"
+LABEL org.opencontainers.image.source="https://github.com/heiher/hev-socks5-tunnel"
 
 RUN apk add --update --no-cache \
     iproute2
@@ -26,8 +26,8 @@ ENV TUN=tun0 \
     MARK=438 \
     SOCKS5_ADDR=172.17.0.1 \
     SOCKS5_PORT=99 \
-    SOCKS5_USERNAME='imzami' \
-    SOCKS5_PASSWORD='11221099' \
+    SOCKS5_USERNAME='' \
+    SOCKS5_PASSWORD='' \
     SOCKS5_UDP_MODE=udp \
     CONFIG_ROUTES=1 \
     IPV4_INCLUDED_ROUTES=0.0.0.0/0 \
