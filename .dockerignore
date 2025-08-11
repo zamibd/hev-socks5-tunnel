@@ -5,7 +5,4 @@
 /.github/
 /README.md
 /License
-
-/Dockerfile
-
-/conf/
+/conf/ 
